@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4 (Python 3.14.2 on win32)" generated="2025-12-17T15:38:50.385161" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="C:\bigboss\Automate\robotframework\login_tests">
+<suite id="s1-s1" name="Login Test" source="C:\bigboss\Automate\robotframework\login_tests\login_test.robot">
+<test id="s1-s1-t1" name="Login 10 Users Open Close" line="47">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-17T15:38:50.414060" level="INFO">===== LOGIN USER Y222827 =====</msg>
+<arg>===== LOGIN USER ${user} =====</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-17T15:38:50.413794" elapsed="0.000315"/>
+</kw>
+<kw name="Open Browser">
+<msg time="2025-12-17T15:38:50.414612" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2025-12-17T15:38:50.414588" elapsed="0.000064">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Set Window Size">
+<arg>1200</arg>
+<arg>800</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.414738" elapsed="0.000013"/>
+</kw>
+<kw name="Set Selenium Speed">
+<arg>${DELAY}</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.414805" elapsed="0.000010"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>id=username</arg>
+<arg>10s</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.414861" elapsed="0.000011"/>
+</kw>
+<kw name="Title Should Be">
+<arg>ระบบแจ้งซ่อม</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.414917" elapsed="0.000010"/>
+</kw>
+<kw name="Input Text">
+<arg>id=username</arg>
+<arg>${user}</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.414980" elapsed="0.000010"/>
+</kw>
+<kw name="Input Text">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.415038" elapsed="0.000008"/>
+</kw>
+<kw name="Click Button">
+<arg>id=submit-button</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.415088" elapsed="0.000009"/>
+</kw>
+<kw name="Wait Until Location Is">
+<arg>${WELCOME URL}</arg>
+<arg>10s</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.415136" elapsed="0.000009"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" start="2025-12-17T15:38:50.415185" elapsed="0.000009"/>
+</kw>
+<var name="${user}">Y222827</var>
+<status status="FAIL" start="2025-12-17T15:38:50.413479" elapsed="0.001748">No keyword with name 'Open Browser' found.</status>
+</iter>
+<var>${user}</var>
+<value>@{USERS}</value>
+<status status="FAIL" start="2025-12-17T15:38:50.413292" elapsed="0.001979">No keyword with name 'Open Browser' found.</status>
+</for>
+<status status="FAIL" start="2025-12-17T15:38:50.413038" elapsed="0.002432">No keyword with name 'Open Browser' found.</status>
+</test>
+<doc>Login test with 10 different usernames</doc>
+<status status="FAIL" start="2025-12-17T15:38:50.410440" elapsed="0.005389"/>
+</suite>
+<suite id="s1-s2" name="Valid Login" source="C:\bigboss\Automate\robotframework\login_tests\valid_login.robot">
+<test id="s1-s2-t1" name="Valid Login" line="9">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Open Browser">
+<msg time="2025-12-17T15:38:50.420445" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2025-12-17T15:38:50.420424" elapsed="0.000049">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2025-12-17T15:38:50.420572" elapsed="0.000012"/>
+</kw>
+<kw name="Set Selenium Speed">
+<arg>${DELAY}</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.420630" elapsed="0.000009"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2025-12-17T15:38:50.420718" elapsed="0.000016"/>
+</kw>
+<status status="FAIL" start="2025-12-17T15:38:50.419885" elapsed="0.000917">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Input Username" owner="resource">
+<arg>Y222827</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.420985" elapsed="0.000015"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<arg>1234</arg>
+<status status="NOT RUN" start="2025-12-17T15:38:50.421117" elapsed="0.000014"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<status status="NOT RUN" start="2025-12-17T15:38:50.421231" elapsed="0.000013"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2025-12-17T15:38:50.421338" elapsed="0.000012"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg time="2025-12-17T15:38:50.421889" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" start="2025-12-17T15:38:50.421867" elapsed="0.000047">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" start="2025-12-17T15:38:50.419604" elapsed="0.002430">No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" start="2025-12-17T15:38:50.416209" elapsed="0.006105"/>
+</suite>
+<status status="FAIL" start="2025-12-17T15:38:50.386433" elapsed="0.036235"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="0" fail="2" skip="0">Login Tests</stat>
+<stat name="Login Test" id="s1-s1" pass="0" fail="1" skip="0">Login Tests.Login Test</stat>
+<stat name="Valid Login" id="s1-s2" pass="0" fail="1" skip="0">Login Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-12-17T15:38:50.412284" level="ERROR">Error in file 'C:\bigboss\Automate\robotframework\login_tests\login_test.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\bigboss\Automate\robotframework
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314\python314.zip
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314\DLLs
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314\Lib
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314\Lib\site-packages</msg>
+<msg time="2025-12-17T15:38:50.419209" level="ERROR">Error in file 'C:\bigboss\Automate\robotframework\login_tests\resource.robot' on line 7: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\bigboss\Automate\robotframework
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314\python314.zip
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314\DLLs
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314\Lib
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314
+  C:\Users\Computer\AppData\Local\Programs\Python\Python314\Lib\site-packages</msg>
+</errors>
+</robot>

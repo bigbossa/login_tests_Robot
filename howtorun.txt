@@ -1,0 +1,18 @@
+in Partdition C:bigboss\Automate\robotframework
+-----------------------------------
+cd C:bigboss\Automate\robotframework
+-----------------------------------
+command : Teminal 
+-----------------------
+robot .\login_tests\ 
+-----------------------
+Edit username password in login_tests.robot
+-----------------------
+Row 56-57 
+        Input Text    id=username    ${user}
+        Input Text    id=password    ${PASSWORD}
+Chack id in website Input - id ? username password id? 
+in submit-button in login form
+-------------------------------------
+cd C:\bigboss\Automate\robotframework
+robot .\login_tests

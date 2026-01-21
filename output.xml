@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4 (Python 3.14.2 on win32)" generated="2025-12-23T12:40:35.677911" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="C:\bigboss\Automate\robotframework\login_tests">
+<suite id="s1-s1" name="Login Test" source="C:\bigboss\Automate\robotframework\login_tests\login_test.robot">
+<test id="s1-s1-t1" name="Login 10 Users Open Close" line="30">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-12-23T12:40:35.835992" level="INFO">===== LOGIN USER Y111085 =====</msg>
+<arg>===== LOGIN USER ${user} =====</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-12-23T12:40:35.835716" elapsed="0.000329"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T12:40:35.836334" level="INFO">Opening browser 'chrome' to base url 'https://e-memo-yongconcrete.com:10445/graph/login'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T12:40:35.836173" elapsed="1.534444"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1200</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-12-23T12:40:37.370786" elapsed="0.021438"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-12-23T12:40:37.392401" elapsed="0.000205"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-23T12:40:37.392697" elapsed="0.617957"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-23T12:40:38.707232" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-12-23T12:40:38.707417" level="FAIL">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</msg>
+<arg>ระบบแจ้งซ่อม</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="FAIL" start="2025-12-23T12:40:38.011052" elapsed="0.698282">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-23T12:40:38.709526" elapsed="0.000037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-23T12:40:38.709655" elapsed="0.000024"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=submit-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-12-23T12:40:38.709760" elapsed="0.000022"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${WELCOME URL}</arg>
+<arg>10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2025-12-23T12:40:38.709860" elapsed="0.000023"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-12-23T12:40:38.709958" elapsed="0.000022"/>
+</kw>
+<var name="${user}">Y111085</var>
+<status status="FAIL" start="2025-12-23T12:40:35.835255" elapsed="2.874822">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</status>
+</iter>
+<var>${user}</var>
+<value>@{USERS}</value>
+<status status="FAIL" start="2025-12-23T12:40:35.835063" elapsed="2.875289">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</status>
+</for>
+<status status="FAIL" start="2025-12-23T12:40:35.834781" elapsed="2.876290">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</status>
+</test>
+<doc>Login test with 10 different usernames</doc>
+<status status="FAIL" start="2025-12-23T12:40:35.702451" elapsed="3.009492"/>
+</suite>
+<suite id="s1-s2" name="Valid Login" source="C:\bigboss\Automate\robotframework\login_tests\valid_login.robot">
+<test id="s1-s2-t1" name="Valid Login" line="9">
+<kw name="Open Browser To Login Page" owner="resource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-23T12:40:38.716985" level="INFO">Opening browser 'chrome' to base url 'https://e-memo-yongconcrete.com:10445/graph/login'.</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-23T12:40:38.716782" elapsed="1.786670"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-23T12:40:40.504231" elapsed="0.331836"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-12-23T12:40:40.836219" elapsed="0.000193"/>
+</kw>
+<kw name="Login Page Should Be Open" owner="resource">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-23T12:40:42.976509" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-12-23T12:40:42.976670" level="FAIL">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</msg>
+<arg>ระบบแจ้งซ่อม</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="FAIL" start="2025-12-23T12:40:40.836721" elapsed="2.140620">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</status>
+</kw>
+<status status="FAIL" start="2025-12-23T12:40:40.836543" elapsed="2.141001">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</status>
+</kw>
+<status status="FAIL" start="2025-12-23T12:40:38.716480" elapsed="4.261208">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</status>
+</kw>
+<kw name="Input Username" owner="resource">
+<arg>Y222827</arg>
+<status status="NOT RUN" start="2025-12-23T12:40:42.978005" elapsed="0.000050"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<arg>1234</arg>
+<status status="NOT RUN" start="2025-12-23T12:40:42.978284" elapsed="0.000025"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<status status="NOT RUN" start="2025-12-23T12:40:42.978443" elapsed="0.000021"/>
+</kw>
+<kw name="Welcome Page Should Be Open" owner="resource">
+<status status="NOT RUN" start="2025-12-23T12:40:42.978579" elapsed="0.000018"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-23T12:40:42.978888" elapsed="3.073031"/>
+</kw>
+<status status="FAIL" start="2025-12-23T12:40:38.715777" elapsed="7.336380">Title should have been 'ระบบแจ้งซ่อม' but was 'ระบบพล็อตกราฟแปลงที่'.</status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" start="2025-12-23T12:40:38.712629" elapsed="7.340239"/>
+</suite>
+<status status="FAIL" start="2025-12-23T12:40:35.679492" elapsed="10.374048"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="0" fail="2" skip="0">Login Tests</stat>
+<stat name="Login Test" id="s1-s1" pass="0" fail="1" skip="0">Login Tests.Login Test</stat>
+<stat name="Valid Login" id="s1-s2" pass="0" fail="1" skip="0">Login Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
